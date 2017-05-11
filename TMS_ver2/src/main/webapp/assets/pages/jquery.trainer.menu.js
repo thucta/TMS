@@ -1,0 +1,91 @@
+/**
+* Theme: TMS FSOFT GST
+* Author: TrangNVT
+* Trainer Menu
+*/
+
+$(document).ready(function(){
+	$('#Trainer_RightContent').load('Trainer_Dashboard.jsp');
+});
+
+$("#Trainer_Dashboard").click(function(){
+	$('#Trainer_RightContent').load('Trainer_Dashboard.jsp');
+	$('.page-title').text('Dashboard');
+	if(!$("#Trainer_Dashboard").hasClass('active'))
+	{		
+		$("#Trainer_Dashboard").addClass('active');
+	}
+	if($("#Trainer_Calendar").hasClass('active'))
+	{
+		$("#Trainer_Calendar").removeClass('active');
+	}
+	if($("#Trainer_Mail").hasClass('active'))
+	{
+		$("#Trainer_Mail").removeClass('active');
+	}
+	if($("#Trainer_Profile").hasClass('active'))
+	{
+		$("#Trainer_Profile").removeClass('active');
+	}
+});
+
+$("#Trainer_Calendar").click(function(){
+	$('#Trainer_RightContent').load('Trainer_Calendar.jsp');
+	$('.page-title').text('Calendar');
+	if($("#Trainer_Dashboard").hasClass('active'))
+	{		
+		$("#Trainer_Dashboard").removeClass('active');
+	}
+	if(!$("#Trainer_Calendar").hasClass('active'))
+	{
+		$("#Trainer_Calendar").addClass('active');
+	}
+	if($("#Trainer_Mail").hasClass('active'))
+	{
+		$("#Trainer_Mail").removeClass('active');
+	}
+	if($("#Trainer_Profile").hasClass('active'))
+	{
+		$("#Trainer_Profile").removeClass('active');
+	}
+});
+$("#Trainer_Mail").click(function(){
+	$('#Trainer_RightContent').load('Trainer_Mail.jsp');
+	$('.page-title').text('Mail');
+	if($("#Trainer_Dashboard").hasClass('active'))
+	{		
+		$("#Trainer_Dashboard").removeClass('active');
+	}
+	if($("#Trainer_Calendar").hasClass('active'))
+	{
+		$("#Trainer_Calendar").removeClass('active');
+	}
+	if(!$("#Trainer_Mail").hasClass('active'))
+	{
+		$("#Trainer_Mail").addClass('active');
+	}
+	if($("#Trainer_Profile").hasClass('active'))
+	{
+		$("#Trainer_Profile").removeClass('active');
+	}
+});
+$("#Trainer_Profile").click(function(){
+	$('#Trainer_RightContent').load('Trainer_Profile.jsp');
+	$('.page-title').text('Profile');
+	if($("#Trainer_Dashboard").hasClass('active'))
+	{		
+		$("#Trainer_Dashboard").removeClass('active');
+	}
+	if($("#Trainer_Calendar").hasClass('active'))
+	{
+		$("#Trainer_Calendar").removeClass('active');
+	}
+	if($("#Trainer_Mail").hasClass('active'))
+	{
+		$("#Trainer_Mail").removeClass('active');
+	}
+	if(!$("#Trainer_Profile").hasClass('active'))
+	{
+		$("#Trainer_Profile").addClass('active');
+	}
+});
